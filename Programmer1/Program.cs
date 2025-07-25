@@ -4,19 +4,17 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Enter your first name: "); //asked the user
-        string firstName = Console.ReadLine();
+        Console.Write("Enter your age in years: ");
+        int age = int.Parse(Console.ReadLine());
 
-        Console.Write("Enter your last name: "); //asked the user
-        string lastName = Console.ReadLine();
-
-        if (string.IsNullOrWhiteSpace(firstName) || string.IsNullOrWhiteSpace(lastName)) //check if the name is empty
+        if (age >= 1 && age <= 120)
         {
-            Console.WriteLine("Error: First name and last name cannot be empty."); //display if error
+            Console.WriteLine($"You are {age * 12} months old.");
         }
         else
         {
-            Console.WriteLine($"Your full name is: {firstName} {lastName}"); //display if it is successful
+            Console.WriteLine("Invalid age. Age must be between 1 and 120.");
         }
     }
 }
+
